@@ -1,0 +1,60 @@
+//Teste de Requisições REST - jogos
+//@baseURL = https://topicos-jogos-beckend.vercel.app
+@baseURL = https://topicos-jogos-beckend.vercel.app
+@id = 6357f3ec5570c95c07a669c5
+@nome_jogo = The last of US
+###
+// GET - Lista todos os jogos
+GET {{baseURL}}/jogos
+Content-Type: application/json
+
+###
+// GET - Lista apenas um jogo pelo id
+GET {{baseURL}}/jogos/id/{{id}}
+Content-Type: application/json
+
+###
+// GET - Lista apenas um jogo pela razão social
+GET {{baseURL}}/jogos/nome_produto/{{nome_produto}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo jogo
+POST {{baseURL}}/jogos
+Content-Type: application/json
+
+{
+   "_id": "6357f6c95570c95c07a669c7",
+    "codigo_jogo":1,
+    "Nome":"The last of US",
+    "ano_lancamento": 2012,
+    "classificação_indicativa": "16",
+    "Preco": 250.00,
+}
+
+### 
+// DELETE - Apaga um jogo através do id informado
+DELETE {{baseURL}}/jogos/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera um jogo pelo ID
+PUT {{baseURL}}/jogos
+Content-Type: application/json
+
+{
+    "_id": "6357f6c95570c95c07a669c7",
+    "codigo_jogo":1,
+    "Nome":"The last of US",
+    "ano_lancamento": 2012,
+    "classificação_indicativa": "16",
+    "Preco": 250.00,
+    
+    }
+  }
+
+
+    
+})
+
+

@@ -1,0 +1,292 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "📚 API Jogos Topicos",
+    "description": "➡️Documentação gerada automaticamente pelo módulo <a href='https://github.com/davibaltar/swagger-autogen' target='_blank'>swagger-autogen</a>."
+  },
+  "host": "https://topicos-jogos.vercel.app",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "access-token",
+      "description": "Token de Acesso gerado após o login"
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/jogos/": {
+      "get": {
+        "tags": [
+          "jogos"
+        ],
+        "description": "Endpoint para obter todos os jogos de Serviço do sistema.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Listagem dos jogos de serviço obtida com sucesso",
+            "schema": {
+              "$ref": "#/definitions/jogos"
+            }
+          },
+          "500": {
+            "description": "Erro ao obter a listagem dos jogos",
+            "schema": {
+              "$ref": "#/definitions/Erro"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "jogos"
+        ],
+        "description": "Endpoint que inclui um novo jogo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listagem dos jogos de serviço obtida com sucesso",
+            "schema": {
+              "$ref": "#/definitions/jogos"
+            }
+          },
+          "201": {
+            "description": "Criado"
+          },
+          "202": {
+            "description": "Aceito"
+          },
+          "400": {
+            "description": "Solicitação Inválida"
+          },
+          "403": {
+            "description": "Acesso Negado"
+          },
+          "500": {
+            "description": "Erro ao obter a listagem dos jogos",
+            "schema": {
+              "$ref": "#/definitions/Erro"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "jogos"
+        ],
+        "description": "Endpoint que permite alterar os dados do jogo pelo id",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listagem dos jogos de serviço obtida com sucesso",
+            "schema": {
+              "$ref": "#/definitions/jogos"
+            }
+          },
+          "201": {
+            "description": "Criado"
+          },
+          "202": {
+            "description": "Aceito"
+          },
+          "400": {
+            "description": "Solicitação Inválida"
+          },
+          "403": {
+            "description": "Acesso Negado"
+          },
+          "500": {
+            "description": "Erro ao obter a listagem dos jogos",
+            "schema": {
+              "$ref": "#/definitions/Erro"
+            }
+          }
+        }
+      }
+    },
+    "/api/jogos/id/{id}": {
+      "get": {
+        "tags": [
+          "jogo"
+        ],
+        "description": "Endpoint que retorna os dados do jogo filtrando pelo id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Solicitação Inválida"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/api/jogos/razao/{razao}": {
+      "get": {
+        "tags": [
+          "jogos"
+        ],
+        "description": "Endpoint que retorna os dados do jogo filtrando por parte da Razão Social",
+        "parameters": [
+          {
+            "name": "razao",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Solicitação Inválida"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/api/jogos/{id}": {
+      "delete": {
+        "tags": [
+          "jogos"
+        ],
+        "description": "Endpoint que permite excluir um jogo filtrando pelo id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Aceito"
+          },
+          "400": {
+            "description": "Solicitação Inválida"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Erro": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "example": "Erro gerado pela aplicação"
+        },
+        "msg": {
+          "type": "string",
+          "example": "Mensagem detalhando o erro"
+        },
+        "param": {
+          "type": "string",
+          "example": "URL que gerou o erro"
+        }
+      }
+    },
+    "jogos": {
+      "type": "object",
+      "properties": {
+        "cnpj": {
+          "type": "string",
+          "example": "33719377000156"
+        },
+        "razao_social": {
+          "type": "string",
+          "example": "ALBERTO SERVICOS DE ENTREGA EIRELI"
+        },
+        "cnae_fiscal": {
+          "type": "number",
+          "example": 7500100
+        },
+        "data_inicio_atividade": {
+          "type": "string",
+          "example": "2019-05-24"
+        },
+        "localizacao": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "example": "Point"
+            },
+            "coordinates": {
+              "type": "array",
+              "example": [
+                -23.28861,
+                -47.31145
+              ],
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
