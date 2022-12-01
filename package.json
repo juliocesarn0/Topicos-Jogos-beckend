@@ -17,7 +17,7 @@
         "express",
         "mongodb"
     ],
-    "author": "Prof. Ricardo Leme",
+    "author": "Júlio",
     "license": "MIT",
     "dependencies": {
         "cors": "^2.8.5",

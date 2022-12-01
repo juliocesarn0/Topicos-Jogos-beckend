@@ -5,11 +5,9 @@
     "title": "📚 API Jogos Topicos",
     "description": "➡️Documentação gerada automaticamente pelo módulo <a href='https://github.com/davibaltar/swagger-autogen' target='_blank'>swagger-autogen</a>."
   },
-  "host": "https://topicos-jogos.vercel.app",
+  "host": "https://topicos-jogos-beckend-8mavodgdw-juliocesarn0.vercel.app",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "securityDefinitions": {
     "apiKeyAuth": {
       "type": "apiKey",
@@ -18,12 +16,8 @@
       "description": "Token de Acesso gerado após o login"
     }
   },
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/api": {
       "get": {
@@ -38,9 +32,7 @@
     },
     "/api/jogos/": {
       "get": {
-        "tags": [
-          "jogos"
-        ],
+        "tags": ["jogos"],
         "description": "Endpoint para obter todos os jogos de Serviço do sistema.",
         "parameters": [],
         "responses": {
@@ -59,9 +51,7 @@
         }
       },
       "post": {
-        "tags": [
-          "jogos"
-        ],
+        "tags": ["jogos"],
         "description": "Endpoint que inclui um novo jogo",
         "parameters": [
           {
@@ -105,9 +95,7 @@
         }
       },
       "put": {
-        "tags": [
-          "jogos"
-        ],
+        "tags": ["jogos"],
         "description": "Endpoint que permite alterar os dados do jogo pelo id",
         "parameters": [
           {
@@ -153,9 +141,7 @@
     },
     "/api/jogos/id/{id}": {
       "get": {
-        "tags": [
-          "jogo"
-        ],
+        "tags": ["jogo"],
         "description": "Endpoint que retorna os dados do jogo filtrando pelo id",
         "parameters": [
           {
@@ -180,9 +166,7 @@
     },
     "/api/jogos/razao/{razao}": {
       "get": {
-        "tags": [
-          "jogos"
-        ],
+        "tags": ["jogos"],
         "description": "Endpoint que retorna os dados do jogo filtrando por parte da Razão Social",
         "parameters": [
           {
@@ -207,9 +191,7 @@
     },
     "/api/jogos/{id}": {
       "delete": {
-        "tags": [
-          "jogos"
-        ],
+        "tags": ["jogos"],
         "description": "Endpoint que permite excluir um jogo filtrando pelo id",
         "parameters": [
           {
@@ -276,10 +258,7 @@
             },
             "coordinates": {
               "type": "array",
-              "example": [
-                -23.28861,
-                -47.31145
-              ],
+              "example": [-23.28861, -47.31145],
               "items": {
                 "type": "number"
               }

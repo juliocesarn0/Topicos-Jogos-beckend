@@ -8,7 +8,7 @@ const doc = {
         title: "📚 API Fatec Itu",
         description: "➡️Documentação gerada automaticamente pelo módulo <a href='https://github.com/davibaltar/swagger-autogen' target='_blank'>swagger-autogen</a>."
     },
-    host: 'https://backendmobile.vercel.appm',
+    host: 'https://backendmobile.vercel.appmhttps://topicos-jogos-beckend-8mavodgdw-juliocesarn0.vercel.app',
     basePath: "/",
     schemes: ['https'],
     consumes: ['application/json'],

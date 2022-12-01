@@ -1,6 +1,7 @@
 //Teste de Requisições REST - jogos
-//@baseURL = https://topicos-jogos-beckend.vercel.app
-@baseURL = https://topicos-jogos-beckend.vercel.app
+//@baseURL = @baseURL = https://topicos-jogos-beckend-8mavodgdw-juliocesarn0.vercel.app
+
+@baseURL = https://topicos-jogos-beckend-8mavodgdw-juliocesarn0.vercel.app
 @id = 6357f3ec5570c95c07a669c5
 @nome_jogo = The last of US
 ###
