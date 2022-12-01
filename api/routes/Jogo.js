@@ -4,7 +4,7 @@ import { connectToDatabase } from "../utils/mongodb.js";
 import { check, validationResult } from "express-validator";
 
 const router = express.Router();
-const nomeCollection = "jogos";
+const nomeCollection = "Jogos";
 const { db, ObjectId } = await connectToDatabase();
 
 /**********************************************
