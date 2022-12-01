@@ -4,7 +4,7 @@ const { MongoClient, ObjectId } = mongodb;
 import { config } from "dotenv";
 config(); // carrega as variáveis definidas no .env
 
-const { MONGODB_URI, MONGODB_DB } = a.env;
+const { MONGODB_URI, MONGODB_DB } = process.env;
 
 if (!MONGODB_URI) {
   throw new Error(
