@@ -1,5 +1,5 @@
-use('topicos')
-db.jogos.insertOne({
+use('Jogos')
+db.jogo.insertOne({
     "_id": "6357f6c95570c95c07a669c7",
     "codigo_jogo":1,
     "Nome":"The last of US",
